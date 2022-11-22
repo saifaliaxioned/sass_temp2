@@ -1,0 +1,245 @@
+// for colors
+@mixin color($color) {
+  color: map-get($map: $colors, $key: $color);
+}
+
+// for wrapper
+@mixin wrapper($className:null, $width:null) {
+  $class: wrapper;
+
+  @if $className {
+    $class : #{$className}-wrapper;
+  }
+
+  .#{$class} {
+    width: $width;
+    margin: $autoMargin;
+  }
+}
+
+// for social icons
+@mixin onlyIcon($data) {
+  @each $key,$value in $data {
+    .#{$key}::before {
+      content: $value;
+    }
+  }
+}
+
+@mixin icon($content:null, $display:null, $position:null, $zIndex:null, $top:null, $right:null, $bottom:null, $left:null, $color:null, $size:null, $weight:null,$float:null, $textIndent:null) {
+  content: $content;
+  @include display($display);
+  @include position($position, $zIndex, $top, $right, $bottom, $left);
+  @include color($color);
+  font-family: 'FontAwesome';
+  font-size: $size;
+  font-weight: $weight;
+  float: $float;
+
+  @if $textIndent {
+    float: left;
+    text-indent: 0;
+  }
+
+}
+
+// for flex
+@mixin flex($flex:null, $basis:null, $justify:null, $align:null, $gap:null, $direction:null, $wrap:null, $flexOrder:null, $short_flex:null) {
+  @if $flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  @if $align {
+    -webkit-box-align: $align;
+    -moz-box-align: $align;
+    -ms-flex-align: $align;
+    -webkit-align-items: $align;
+    align-items: $align;
+  }
+
+  @if $gap {
+    gap: $gap;
+  }
+
+  @if $basis {
+    -ms-flex-preferred-size: $basis;
+    flex-basis: $basis;
+  }
+
+  @if $direction {
+    -webkit-flex-direction: $direction;
+    -moz-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+    -o-flex-direction: $direction;
+
+    @if $direction==row {
+      -webkit-box-orient: horizontal;
+    }
+
+    @else {
+      -webkit-box-orient: vertical;
+    }
+
+    flex-direction: $direction;
+  }
+
+  @if $wrap {
+    -webkit-flex-wrap: $wrap;
+    -moz-flex-wrap: $wrap;
+    -ms-flex-wrap: $wrap;
+    -o-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+  }
+
+  @if $justify {
+    -webkit-justify-content: $justify;
+    -ms-flex-pack: $justify;
+    justify-content: $justify;
+  }
+
+  @if $flexOrder {
+    -webkit-box-ordinal-group: $flexOrder;
+    -moz-box-ordinal-group: $flexOrder;
+    -ms-flex-order: $flexOrder;
+    -webkit-order: $flexOrder;
+    order: $flexOrder;
+  }
+
+  @if $short_flex {
+    flex: $short_flex;
+  }
+}
+
+// for image
+@mixin img($objectFit) {
+  img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: $objectFit;
+    object-fit: $objectFit;
+    -o-object-position: center;
+    object-position: center;
+  }
+}
+
+// for any content width or height
+@mixin content-size($width:null, $height:null) {
+  @if $width {
+    width: $width;
+  }
+
+  @if $height {
+    height: $height;
+  }
+}
+
+// if use display property except flex
+@mixin display($display:null, $float:null, $overflow:null, $zIndex:null) {
+  @if $display {
+    display: $display;
+  }
+
+  @if $float {
+    float: $float;
+  }
+
+  @if $zIndex {
+    z-index: $zIndex;
+  }
+
+  @if $overflow {
+    overflow: $overflow;
+  }
+}
+
+// position style mixin
+@mixin position($position:null, $zIndex:null, $top:null, $right:null, $bottom:null, $left:null) {
+  position: $position;
+  z-index: $zIndex;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// font mixin
+@mixin font($family:null, $size:null, $weight:null, $text:null, $textAlign:null) {
+
+  @if $family {
+    font-family: $family;
+  }
+
+  @if $size {
+    font-size: $size;
+  }
+
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $textAlign {
+    text-align: $textAlign;
+  }
+
+  @if $text {
+    text-transform: $text;
+  }
+}
+
+// transform mixin
+@mixin transform($value:null) {
+  -webkit-transform: $value;
+  -ms-transform: $value;
+  transform: $value;
+}
+
+// transition mixin
+@mixin transition($property:null, $delay:null, $func:null) {
+  -webkit-transition: $property $delay $func;
+  -moz-transition: $property $delay $func;
+  -ms-transition: $property $delay $func;
+  -o-transition: $property $delay $func;
+  transition: $property $delay $func;
+}
+
+// background mixin
+@mixin background($backgroundColor:null, $url:null, $backgroundValue:null) {
+
+  @if $url {
+    background: map-get($map: $colors, $key: $backgroundColor) url($url) $backgroundValue;
+    background-size: cover;
+  }
+
+  @else {
+    background: map-get($map: $colors, $key: $backgroundColor);
+  }
+}
+
+// media query mixin
+@mixin breakpoint($min:null, $max:null) {
+  @if min and max {
+    @media screen and (min-device-width: $min) and (max-device-width: $max) {
+      @content;
+    }
+  }
+}
+
+@mixin maxResponsive($device) {
+  $device_width: map-get($map: $devices, $key: $device);
+
+  @media only screen and (max-width: $device_width) {
+    @content;
+  }
+}
+
+@mixin minResponsive($device) {
+  $device_width: map-get($map: $devices, $key: $device);
+
+  @media only screen and (min-width: $device_width) {
+    @content;
+  }
+}
