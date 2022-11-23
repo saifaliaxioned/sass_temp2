@@ -1,8 +1,6 @@
-@charset "utf-8";
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
-
 /* 1.1. Eric Meyers Reset
    http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -118,15 +116,14 @@ html {
 }
 
 /* Align radios and text inputs with their label */
-
-input[type='radio'] {
+input[type=radio] {
   vertical-align: text-bottom;
 }
 
 /* Hand cursor on clickable input elements */
 label,
-input[type='button'],
-input[type='submit'],
+input[type=button],
+input[type=submit],
 button {
   cursor: pointer;
 }
@@ -156,16 +153,15 @@ sup {
 }
 
 sup {
-  top: -.7em;
+  top: -0.7em;
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 /* 1.2. Clear Fix
    ========================== */
-
 .cf:before,
 .cf:after {
   display: table;
@@ -202,3 +198,78 @@ li {
   width: 81.5%;
   margin: 0 auto;
 }
+
+header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.blue-btn {
+  padding: 14px 26px;
+  border-radius: 4px;
+  background: #33d4d6;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media only screen and (min-width: 1024px) {
+  .blue-btn:hover {
+    background: #fff;
+    color: #33d4d6;
+    -webkit-box-shadow: 1px 2px 8px rgba(192, 192, 196, 0.6);
+    box-shadow: 1px 2px 8px rgba(192, 192, 196, 0.6);
+  }
+}
+
+.grey-text {
+  color: #8e8e94;
+}
+
+/* header start */
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+header .wrapper {
+  width: 94%;
+  padding: 21px 0;
+}
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.logo a {
+  color: #fff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 5px;
+}
+.logo a::before {
+  content: "\e3af";
+  font-family: "FontAwesome";
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(51, 212, 214)), to(rgb(7, 108, 196)));
+  background: -o-linear-gradient(top, rgb(51, 212, 214), rgb(7, 108, 196));
+  background: linear-gradient(180deg, rgb(51, 212, 214), rgb(7, 108, 196));
+  color: #fff;
+}
+
+/* header end */
+
+/*# sourceMappingURL=style.css.map */

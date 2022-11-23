@@ -3,6 +3,12 @@
   color: map-get($map: $colors, $key: $color);
 }
 
+// for box shadow
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+	box-shadow: $value;
+}
+
 // for wrapper
 @mixin wrapper($className:null, $width:null) {
   $class: wrapper;
@@ -26,10 +32,10 @@
   }
 }
 
-@mixin icon($content:null, $display:null, $position:null, $zIndex:null, $top:null, $right:null, $bottom:null, $left:null, $color:null, $size:null, $weight:null,$float:null, $textIndent:null) {
+@mixin icon($content:null, $width:null, $height:null, $padding:null, $margin:null, $display:null, $position:null, $zIndex:null, $top:null, $right:null, $bottom:null, $left:null, $color:null, $size:null, $weight:null,$float:null, $textIndent:null) {
   content: $content;
   @include display($display);
-  @include position($position, $zIndex, $top, $right, $bottom, $left);
+  @include position($width, $height, $position, $zIndex, $top, $right, $bottom, $left);
   @include color($color);
   font-family: 'FontAwesome';
   font-size: $size;
@@ -48,6 +54,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@mixin inline-flex() {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 @mixin justify-content($value) {
@@ -274,7 +286,9 @@
 }
 
 // position style mixin
-@mixin position($position:null, $zIndex:null, $top:null, $right:null, $bottom:null, $left:null) {
+@mixin position($width:null, $height:null, $position:null, $zIndex:null, $top:null, $right:null, $bottom:null, $left:null) {
+  width: $width;
+  height: $height;
   position: $position;
   z-index: $zIndex;
   top: $top;
@@ -317,8 +331,6 @@
 // transition mixin
 @mixin transition($property:null, $delay:null, $func:null) {
   -webkit-transition: $property $delay $func;
-  -moz-transition: $property $delay $func;
-  -ms-transition: $property $delay $func;
   -o-transition: $property $delay $func;
   transition: $property $delay $func;
 }
