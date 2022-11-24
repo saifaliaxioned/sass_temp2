@@ -1,0 +1,14 @@
+/* companies section start */
+.companies {
+  padding: 70px 0;
+
+  @at-root {
+    .company-items {
+      @extend %flex;
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+      gap: 35px;
+    }
+  }
+}
+/* companies section end */
