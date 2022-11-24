@@ -1,6 +1,6 @@
 // for colors
 @mixin color($color) {
-  color: map-get($map: $colors, $key: $color);
+  color: map-get($colors, $color);
 }
 
 // for box shadow
@@ -32,8 +32,13 @@
   }
 }
 
-@mixin icon($content:null, $width:null, $height:null, $padding:null, $margin:null, $display:null, $position:null, $zIndex:null, $top:null, $right:null, $bottom:null, $left:null, $color:null, $size:null, $weight:null,$float:null, $textIndent:null) {
+@mixin icon($content:null, $width:null, $height:null, $padding:null, $margin:null, $bd-radius:null, $display:null, $position:null, $zIndex:null, $top:null, $right:null, $bottom:null, $left:null, $color:null, $size:null, $weight:null,$float:null, $textIndent:null) {
   content: $content;
+  width: $width;
+  height: $height;
+  padding: $padding;
+  margin: $margin;
+  border-radius: $bd-radius;
   @include display($display);
   @include position($width, $height, $position, $zIndex, $top, $right, $bottom, $left);
   @include color($color);

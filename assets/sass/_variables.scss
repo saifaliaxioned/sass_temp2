@@ -1,6 +1,6 @@
-$colors : (btn-text:#fff, black:#000, btn-color: #33d4d6, grey-text: #8e8e94);
+$colors : (btn-text:#fff, black-color:#000, btn-color: #33d4d6, grey-text: #8e8e94);
 
-$devices:("large-desktop":"1280px", "desktop":"1024px", "tablet":"995px", "ipad":"768px", "largePhone":"640px", "mediumPhone":"480px", "smallPhone":"320px");
+$devices:(large-desktop:"1280px", desktop:"1024px", tablet:"995px", ipad:"768px", largePhone:"640px", mediumPhone:"480px", smallPhone:"320px");
 
 $headerIcon:("shop":"\f290","search":"\f002");
 
