@@ -40,7 +40,7 @@
   margin: $margin;
   border-radius: $bd-radius;
   @include display($display);
-  @include position($position, $zIndex, $top, $right, $bottom, $left);
+  @include position($position:$position, $zIndex:$zIndex, $top:$top, $right:$right, $bottom:$bottom, $left:$left);
   @include color($color);
   font-family: 'FontAwesome';
   font-size: $size;

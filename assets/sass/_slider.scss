@@ -1,0 +1,47 @@
+/* slider section start */
+.slider {
+  padding: 47px 0;
+
+  .wrapper {
+    padding: 35px 0;
+    @extend %flex;
+    gap: 30px;
+  }
+
+  @at-root {
+    .slider-image {
+      @include flex-basis(18%);
+      @include position($position: relative);
+      
+      img {
+        border-radius: 50%;
+      }
+      
+      &::before {
+        @include icon("\f10d", $padding: 18px 20px, $bd-radius: 50%, $position: absolute, $bottom: 0, $right: 0, $size: 20px);
+        @include background(btn-color);
+        @include color(white-color);
+      }
+    }
+    
+    .slider-description {
+      padding: 0 2%;
+      @include flex-basis(70%);
+
+      p {
+        width: 85%;
+        padding-top: 40px;
+        @include font($size: 17px, $weight: bold);
+        line-height: 1.8;
+      }
+
+      span {
+        padding: 17px 0;
+        @include display(block);
+        @include color(grey-text);
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+/* slider section end */
