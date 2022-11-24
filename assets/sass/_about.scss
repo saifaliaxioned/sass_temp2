@@ -1,0 +1,59 @@
+/* about section start */ 
+.about {
+  padding-bottom: 40px;
+
+  .wrapper {
+    margin-bottom: 59px;
+  }
+
+  @at-root {
+    .about-content {
+      padding-bottom: 48px;
+      @extend %flex;
+      @include align-items(center);
+      gap: 89px;
+    }
+
+    .about-image {
+      @include flex-basis(48.4%);
+    }
+    
+    .about-details {
+      margin-bottom: 61px;
+      @include flex-basis(38%);
+
+      h4 {
+        padding: 38px 0;
+        @include font($size: 42px, $text: capitalize);
+      }
+
+      p {
+        @include font($size: 15px);
+        line-height: 1.6;
+      }
+    }
+
+    .about-items {
+      padding: 14px 20px;
+      @extend %flex;
+      @include flex-direction(column);
+      line-height: 1.8;
+      
+      li {
+        @include position($position: relative);
+
+        &::before {
+          content: "";
+          @include position(7px, 7px, 50%, absolute, $top: 36%, $left: -20px);
+          @include background(blue-color);
+        }
+      }
+    }
+
+    .about-btn {
+     padding-top: 33px;
+    }
+    
+  }
+}
+/* about section end */ 

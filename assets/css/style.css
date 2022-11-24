@@ -217,7 +217,7 @@ li {
   align-items: center;
 }
 
-.loan-items, .loan-price, .offer-cards, .header-contact, .nav-items {
+.about-items, .about-content, .loan-items, .loan-price, .offer-cards, .header-contact, .nav-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -576,5 +576,67 @@ header .wrapper {
 }
 
 /* offers section end */
+/* about section start */
+.about {
+  padding-bottom: 40px;
+}
+.about .wrapper {
+  margin-bottom: 59px;
+}
+.about-content {
+  padding-bottom: 48px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 89px;
+}
+
+.about-image {
+  -ms-flex-preferred-size: 48.4%;
+  flex-basis: 48.4%;
+}
+
+.about-details {
+  margin-bottom: 61px;
+  -ms-flex-preferred-size: 38%;
+  flex-basis: 38%;
+}
+.about-details h4 {
+  padding: 38px 0;
+  font-size: 42px;
+  text-transform: capitalize;
+}
+.about-details p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.about-items {
+  padding: 14px 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  line-height: 1.8;
+}
+.about-items li {
+  position: relative;
+}
+.about-items li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  position: absolute;
+  top: 36%;
+  left: -20px;
+  background: #0a8cff;
+}
+
+.about-btn {
+  padding-top: 33px;
+}
+
+/* about section end */
 
 /*# sourceMappingURL=style.css.map */
