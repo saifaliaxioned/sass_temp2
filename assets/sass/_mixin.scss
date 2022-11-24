@@ -40,7 +40,7 @@
   margin: $margin;
   border-radius: $bd-radius;
   @include display($display);
-  @include position($width, $height, $position, $zIndex, $top, $right, $bottom, $left);
+  @include position($position, $zIndex, $top, $right, $bottom, $left);
   @include color($color);
   font-family: 'FontAwesome';
   font-size: $size;
@@ -291,9 +291,10 @@
 }
 
 // position style mixin
-@mixin position($width:null, $height:null, $position:null, $zIndex:null, $top:null, $right:null, $bottom:null, $left:null) {
+@mixin position($width:null, $height:null, $bd-radius:null, $position:null, $zIndex:null, $top:null, $right:null, $bottom:null, $left:null) {
   width: $width;
   height: $height;
+  border-radius: $bd-radius;
   position: $position;
   z-index: $zIndex;
   top: $top;

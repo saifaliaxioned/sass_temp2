@@ -1,32 +1,14 @@
-%header-flex {
-  @include display-flex();
-  @include justify-content(space-between);
-  @include align-items(center);
-}
-
-%flex {
-  @include display-flex();
-}
-
-%transition {
-  @include transition(all 0.3s ease);
-}
-
-%transform-center {
-  @include transform(translate(-50%, -50%));
-}
-
 .blue-btn {
   padding: 14px 26px;
   border-radius: 4px;
   @include background(btn-color);
-  @include color(btn-text);
+  @include color(white-color);
   @include font($size: 14px, $weight: bold, $text: capitalize);
   @extend %transition;
 
   @include minResponsive(desktop) {
     &:hover {
-      @include background(btn-text);
+      @include background(white-color);
       @include color(btn-color);
       @include box-shadow(1px 2px 8px #c0c0c499);
     }
@@ -52,7 +34,7 @@ header {
       @include font($size: 20px, $weight: bold, $text: capitalize);
 
       a {
-        @include color(btn-text);
+        @include color(white-color);
         @include inline-flex();
         @include align-items(center);
         gap: 5px;
@@ -68,7 +50,7 @@ header {
           );
           background: -o-linear-gradient(top, #33d4d6, #076cc4);
           background: linear-gradient(180deg, #33d4d6, #076cc4);
-          @include color(btn-text);
+          @include color(white-color);
         }
       }
     }
@@ -90,7 +72,7 @@ header {
       border-radius: 4px;
       @include position($position: absolute, $top: 50%, $left: 50%);
       @include display(inline-block);
-      @include background(btn-text);
+      @include background(white-color);
       text-indent: -99999px;
       @extend %transition;
       @extend %transform-center;
@@ -138,7 +120,7 @@ header {
       }
 
       a {
-        @include color(btn-text);
+        @include color(white-color);
         @extend %transition;
 
         @include minResponsive(desktop) {
@@ -157,17 +139,11 @@ header {
     }
 
     .call-icon {
-      @include position(relative);
-      @include color(btn-text);
+      @include position($position: relative);
+      @include color(white-color);
 
       &::before {
-        @include icon(
-          "\f095",
-          $margin: 0 5px 0 0,
-          $position: absolute,
-          $top: 0,
-          $left: -19px
-        );
+        @include icon( "\f095", $margin: 0 5px 0 0, $position: absolute, $top: 0, $left: -19px);
         @include color(btn-color);
       }
     }
@@ -183,7 +159,7 @@ header {
       @include minResponsive(desktop) {
         &:hover {
           border-color: rgb(255, 255, 255);
-          @include background(btn-text);
+          @include background(white-color);
           @include color(btn-color);
         }
       }

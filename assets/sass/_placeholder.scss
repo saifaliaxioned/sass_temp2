@@ -1,0 +1,17 @@
+%header-flex {
+  @include display-flex();
+  @include justify-content(space-between);
+  @include align-items(center);
+}
+
+%flex {
+  @include display-flex();
+}
+
+%transition {
+  @include transition(all 0.3s ease);
+}
+
+%transform-center {
+  @include transform(translate(-50%, -50%));
+}

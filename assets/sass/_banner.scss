@@ -30,7 +30,7 @@
       p {
         margin-bottom: 35px;
         @include font($size: 58px, $weight: 500);
-        @include color(btn-text);
+        @include color(white-color);
       }
     }
 
@@ -38,7 +38,7 @@
       padding: 44px;
       border-radius: 4px;
       @include flex-basis(40%);
-      @include background(btn-text);
+      @include background(white-color);
 
       h2 {
         @include font($size: 26px, $weight:600);
@@ -65,7 +65,7 @@
             border: 1px solid #e2e2e5;
             border-radius: 4px;
             outline: none;
-            @include background(btn-text);
+            @include background(white-color);
             @include color(grey-text);
             @include font($text: capitalize);
           }

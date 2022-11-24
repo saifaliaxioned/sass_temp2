@@ -1,0 +1,102 @@
+.section-heading {
+  padding-top: 50px;
+  margin: 87px 0;
+  @include font($textAlign: center);
+
+  h3 {
+    padding: 18px 0;
+    @include position($position: relative);
+    @include font($size: 40px);
+
+    &::before {
+      content: "";
+      @include position(55px, 3px, 2px, $position: absolute, $top: 8px, $left:50%);
+      @include background(btn-color);
+      @extend %transform-center;
+    }
+  }
+
+  p {
+    @include font($size: 15px);
+  }
+}
+
+/* offers section start */
+.offers {
+  padding-bottom: 68px;
+  margin-bottom: 48px;
+
+  @at-root {
+    .offer-cards {
+      margin: 20px 0;
+      @extend %flex;
+      gap: 29px;
+
+      > li {
+        border-radius: 3px;
+        @include flex-basis(32%);
+        background: -webkit-gradient(linear, left top, left bottom, from(#0989f9), to(#054782));
+        background: -o-linear-gradient(top, #0989f9, #054782);
+        background: linear-gradient(180deg, #0989f9, #054782);
+        @include color(white-color);
+      }
+    }
+
+    .loan-price {
+      border-bottom: 1px solid #33d4d64d;
+      @extend %flex;
+      @include flex-direction(column);
+      @include font($textAlign: center);
+      line-height: 2;
+
+      img {
+        width: auto;
+        margin: 43px 0;
+      }
+
+      h4 {
+        @include font($size: 14px ,$text: capitalize);
+      }
+
+      p {
+        margin-bottom: 16px;
+        @include color(btn-color);
+        @include font($size: 27px);
+      }
+    }
+
+    .loan-details {
+      padding: 48px;
+    }
+
+    .loan-items {
+      @extend %flex;
+      @include flex-direction(column);
+      gap: 12px;
+      
+      li {
+        @include font($size: 16px);
+
+        &::before {
+          content: "";
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          margin-right: 10px;
+          @include display(inline-block);
+          @include background(btn-color);
+        }
+      }
+    }
+
+    .loan-btn {
+      padding-top: 40px;
+
+      a {
+        width: 100%;
+        @include font($size: 14px,$textAlign: center);
+      }
+    }
+  }
+}
+/* offers section end */
