@@ -41,8 +41,7 @@
 
     .loan-price {
       border-bottom: 1px solid #33d4d64d;
-      @extend %flex;
-      @include flex-direction(column);
+      @extend %flex-column;
       @include font($textAlign: center);
       line-height: 2;
 
@@ -67,8 +66,7 @@
     }
 
     .loan-items {
-      @extend %flex;
-      @include flex-direction(column);
+      @extend %flex-column;
       gap: 12px;
       
       li {

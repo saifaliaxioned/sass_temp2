@@ -1,0 +1,76 @@
+/* question section start */ 
+.question {
+  .wrapper {
+    width: 100%;
+  }
+
+  @at-root {
+    .question-content {
+      @extend %flex;
+      gap: 77px;
+    }
+    .question-image {
+      @include flex-basis(45%);
+    }
+    
+    .accordion-part {
+      padding-top: 34px;
+      margin-top: 44px;
+      @include flex-basis(34%);
+      
+      h4 {
+        padding: 38px 0;
+        @include font($size: 42px);
+
+        &::first-letter {
+          @include font($text:uppercase);
+        }
+      }
+    }
+
+    .accordion-items {
+      @extend %flex-column;
+
+      li  {
+        padding: 20px 0 10px  ;
+        border-bottom: 1px solid rgb(142, 142, 148, 0.2);
+        cursor: pointer;
+
+        h5 {
+          @include font($weight: bold);
+          &::first-letter {
+            @include font($text: uppercase);
+          }
+        }
+
+        &:first-child a::before {
+          @include transform(rotate(180deg));
+        }
+
+        p {
+          padding: 25px 25px 19px 37px;
+          @include font($size: 13px);
+          line-height: 1.8;
+        }
+      }
+    }
+
+    .accordian-heading {
+      @extend %flex;
+      gap: 19px;
+    }
+
+    .accordion-btn {
+      a {
+        @include color(grey-text);
+        text-indent: -9999px;
+
+        &::before {
+          @include icon("\f107", $margin: 0 0 0 2%, $float: left, $textIndent: true);
+          @extend %transition;
+        }
+      }
+    }
+  }
+}
+/* question section end */ 

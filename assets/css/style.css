@@ -217,13 +217,23 @@ li {
   align-items: center;
 }
 
-.work-items, .about-items, .about-content, .loan-items, .loan-price, .offer-cards, .header-contact, .nav-items {
+.accordian-heading, .question-content, .work-items, .about-content, .offer-cards, .header-contact, .nav-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.header-btn, .nav-items a, .bar::before,
+.accordion-items, .about-items, .loan-items, .loan-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.accordion-btn a::before, .header-btn, .nav-items a, .bar::before,
 .bar::after, .bar, .blue-btn {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -518,10 +528,6 @@ header .wrapper {
 
 .loan-price {
   border-bottom: 1px solid rgba(51, 212, 214, 0.3019607843);
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   text-align: center;
   line-height: 2;
 }
@@ -544,10 +550,6 @@ header .wrapper {
 }
 
 .loan-items {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   gap: 12px;
 }
 .loan-items li {
@@ -610,10 +612,6 @@ header .wrapper {
 
 .about-items {
   padding: 14px 20px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   line-height: 1.8;
 }
 .about-items li {
@@ -672,5 +670,72 @@ header .wrapper {
 }
 
 /* work section end */
+/* question section start */
+.question .wrapper {
+  width: 100%;
+}
+.question-content {
+  gap: 77px;
+}
+
+.question-image {
+  -ms-flex-preferred-size: 45%;
+  flex-basis: 45%;
+}
+
+.accordion-part {
+  padding-top: 34px;
+  margin-top: 44px;
+  -ms-flex-preferred-size: 34%;
+  flex-basis: 34%;
+}
+.accordion-part h4 {
+  padding: 38px 0;
+  font-size: 42px;
+}
+.accordion-part h4::first-letter {
+  text-transform: uppercase;
+}
+
+.accordion-items li {
+  padding: 20px 0 10px;
+  border-bottom: 1px solid rgba(142, 142, 148, 0.2);
+  cursor: pointer;
+}
+.accordion-items li h5 {
+  font-weight: bold;
+}
+.accordion-items li h5::first-letter {
+  text-transform: uppercase;
+}
+.accordion-items li:first-child a::before {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.accordion-items li p {
+  padding: 25px 25px 19px 37px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.accordian-heading {
+  gap: 19px;
+}
+
+.accordion-btn a {
+  color: #8e8e94;
+  text-indent: -9999px;
+}
+.accordion-btn a::before {
+  content: "\f107";
+  margin: 0 0 0 2%;
+  font-family: "FontAwesome";
+  float: left;
+  float: left;
+  text-indent: 0;
+}
+
+/* question section end */
 
 /*# sourceMappingURL=style.css.map */

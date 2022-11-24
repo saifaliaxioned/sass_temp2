@@ -8,6 +8,11 @@
   @include display-flex();
 }
 
+%flex-column {
+  @include display-flex();
+  @include flex-direction(column);
+}
+
 %transition {
   @include transition(all 0.3s ease);
 }

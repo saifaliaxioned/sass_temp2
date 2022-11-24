@@ -35,8 +35,7 @@
 
     .about-items {
       padding: 14px 20px;
-      @extend %flex;
-      @include flex-direction(column);
+      @extend %flex-column;
       line-height: 1.8;
       
       li {
