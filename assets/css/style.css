@@ -217,13 +217,13 @@ li {
   align-items: center;
 }
 
-.apply-content-btn, .apply-content, .company-items, .slider .wrapper, .accordian-heading, .question-content, .work-items, .about-content, .offer-cards, .header-contact, .nav-items {
+.footer-items, .footer-content, .apply-content-btn, .apply-content, .company-items, .slider .wrapper, .accordian-heading, .question-content, .work-items, .about-content, .offer-cards, .header-contact, .nav-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.accordion-items, .about-items, .loan-items, .loan-price {
+.services-items, .subscribe-items, .useful-items, .address-items, .accordion-items, .about-items, .loan-items, .loan-price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -233,7 +233,7 @@ li {
   flex-direction: column;
 }
 
-.accordion-btn a::before, .header-btn, .nav-items a, .bar::before,
+.services-items a, .subscribe-items a, .useful-items a, .accordion-btn a::before, .header-btn, .nav-items a, .bar::before,
 .bar::after, .bar, .blue-btn {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -264,7 +264,7 @@ li {
   }
 }
 
-.grey-text {
+.grey-text, .address-items p, .address-items a {
   color: #8e8e94;
 }
 
@@ -833,5 +833,62 @@ header .wrapper {
 }
 
 /* apply div end */
+.footer-content {
+  padding: 50px 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 90px;
+}
+
+footer .logo {
+  width: 100%;
+  margin: 5px 0 20px;
+}
+footer .logo a {
+  color: #000;
+}
+
+.footer-items {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  gap: 90px;
+}
+.footer-items li h6 {
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.footer-items li:last-child {
+  -ms-flex-preferred-size: 43%;
+  flex-basis: 43%;
+}
+
+.address-items {
+  padding: 30px 0;
+}
+.address-items li {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.6;
+}
+.services-items, .subscribe-items, .useful-items {
+  padding: 15px 0;
+}
+.services-items a, .subscribe-items a, .useful-items a {
+  padding: 11px 0;
+  color: #8e8e94;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.useful-items a {
+  padding: 11px 0;
+  color: #8e8e94;
+  font-size: 12px;
+  font-weight: bold;
+}
 
 /*# sourceMappingURL=style.css.map */
