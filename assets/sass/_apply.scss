@@ -1,0 +1,38 @@
+/* apply div start */
+.applyDiv {
+  padding: 90px 0;
+  margin: 50px 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(9, 30, 78, 0.4)), to(rgba(9, 30, 78, 0.4))),
+    url(https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHR5cGluZ3xlbnwwfDB8MHx8&w=1000&q=80)
+      no-repeat;
+  background: -o-linear-gradient(rgba(9, 30, 78, 0.4), rgba(9, 30, 78, 0.4)),
+    url(https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHR5cGluZ3xlbnwwfDB8MHx8&w=1000&q=80)
+      no-repeat;
+  background: linear-gradient(rgba(9, 30, 78, 0.4), rgba(9, 30, 78, 0.4)),
+    url(https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHR5cGluZ3xlbnwwfDB8MHx8&w=1000&q=80)
+      no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  background-attachment: fixed;
+
+  @at-root {
+    .apply-content {
+      @extend %flex;
+      padding: 50px 0;
+
+      p {
+        @include flex-basis(60%);
+        @include color(white-color);
+        @include font($size: 44px);
+      }
+    }
+
+    .apply-content-btn {
+      @include flex-basis(40%);
+      @extend %flex;
+      @include justify-content(flex-end);
+      @include align-items(center);
+    }
+  }
+}
+/* apply div end */
