@@ -344,12 +344,12 @@
 @mixin background($backgroundColor:null, $url:null, $backgroundValue:null) {
 
   @if $url {
-    background: map-get($map: $colors, $key: $backgroundColor) url($url) $backgroundValue;
+    background: map-get($colors, $backgroundColor) url($url) $backgroundValue;
     background-size: cover;
   }
 
   @else {
-    background: map-get($map: $colors, $key: $backgroundColor);
+    background: map-get($colors, $backgroundColor);
   }
 }
 

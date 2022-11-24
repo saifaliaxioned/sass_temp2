@@ -1,0 +1,85 @@
+/* banner section start */
+.banner {
+  padding: 100px 0;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#091e4e99),
+      to(#091e4e99)
+    ),
+    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8b2ZpZmljZSUyMG1lZXRpbmd8ZW58MHwwfDB8fA%3D%3D&w=1000&q=80")
+      no-repeat center;
+  background: -o-linear-gradient(#091e4e99, #091e4e99),
+    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8b2ZpZmljZSUyMG1lZXRpbmd8ZW58MHwwfDB8fA%3D%3D&w=1000&q=80")
+      no-repeat center;
+  background: linear-gradient(#091e4e99, #091e4e99),
+    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8b2ZpZmljZSUyMG1lZXRpbmd8ZW58MHwwfDB8fA%3D%3D&w=1000&q=80")
+      no-repeat center;
+  background-size: cover;
+
+  @at-root {
+    .banner-content {
+      margin: 85px 0;
+      @extend %header-flex;
+    }
+
+    .banner-description {
+      @include flex-basis(47%);
+
+      p {
+        margin-bottom: 35px;
+        @include font($size: 58px, $weight: 500);
+        @include color(btn-text);
+      }
+    }
+
+    .banner-form {
+      padding: 44px;
+      border-radius: 4px;
+      @include flex-basis(40%);
+      @include background(btn-text);
+
+      h2 {
+        @include font($size: 26px, $weight:600);
+
+				&::first-letter {
+					@include font($text: uppercase);
+				}
+      }
+
+			p {
+				margin: 23px 0 37px;
+
+        &.price-para {
+          margin: 26px 0 37px;
+        }
+			}
+
+      @at-root {
+        .input-group {
+          select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #e2e2e5;
+            border-radius: 4px;
+            outline: none;
+            @include background(btn-text);
+            @include color(grey-text);
+            @include font($text: capitalize);
+          }
+        }
+
+        .input-control {
+          a {
+            width: 100%;
+            margin-bottom: 9px;
+            @include font($textAlign: center);
+          }
+        }
+      }
+    }
+  }
+}
+/* banner section end */

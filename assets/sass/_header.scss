@@ -149,40 +149,45 @@ header {
       }
     }
 
-		.header-contact {
-			@include font($size: 10px);
-			@extend %flex;
-			@include align-items(center);
-			gap: 10px;
-		}
+    .header-contact {
+      @include font($size: 10px);
+      @extend %flex;
+      @include align-items(center);
+      gap: 10px;
+    }
 
-		.call-icon {
-			@include position(relative);
-			@include color(btn-text);
+    .call-icon {
+      @include position(relative);
+      @include color(btn-text);
 
-			&::before {
-				@include icon("\f095", $margin:0 5px 0 0, $position: absolute, $top: 0, $left: -19px);
-				@include color(btn-color);
-			}
-		}
+      &::before {
+        @include icon(
+          "\f095",
+          $margin: 0 5px 0 0,
+          $position: absolute,
+          $top: 0,
+          $left: -19px
+        );
+        @include color(btn-color);
+      }
+    }
 
-		.header-btn {
-			padding: 14px 9px;
-			border: 1px solid rgb(51, 212, 214);
-			border-radius: 3px;
-			@include color(btn-color);
-			@include font($weight: bold, $text: capitalize);
-			@extend %transition;
+    .header-btn {
+      padding: 14px 9px;
+      border: 1px solid rgb(51, 212, 214);
+      border-radius: 3px;
+      @include color(btn-color);
+      @include font($weight: bold, $text: capitalize);
+      @extend %transition;
 
-			@include minResponsive(desktop) {
-				&:hover {
-					border-color: rgb(255, 255, 255);
-					@include background(btn-text);
-					@include color(btn-color);				
-				}
-			}
-		}
-		
+      @include minResponsive(desktop) {
+        &:hover {
+          border-color: rgb(255, 255, 255);
+          @include background(btn-text);
+          @include color(btn-color);
+        }
+      }
+    }
   }
 }
 /* header end */

@@ -177,6 +177,12 @@ sub {
 }
 
 /*for all*/
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -199,7 +205,7 @@ li {
   margin: 0 auto;
 }
 
-header .wrapper {
+.banner-content, header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -408,5 +414,67 @@ header .wrapper {
 }
 
 /* header end */
+/* banner section start */
+.banner {
+  padding: 100px 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(9, 30, 78, 0.6)), to(rgba(9, 30, 78, 0.6))), url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8b2ZpZmljZSUyMG1lZXRpbmd8ZW58MHwwfDB8fA%3D%3D&w=1000&q=80") no-repeat center;
+  background: -o-linear-gradient(rgba(9, 30, 78, 0.6), rgba(9, 30, 78, 0.6)), url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8b2ZpZmljZSUyMG1lZXRpbmd8ZW58MHwwfDB8fA%3D%3D&w=1000&q=80") no-repeat center;
+  background: linear-gradient(rgba(9, 30, 78, 0.6), rgba(9, 30, 78, 0.6)), url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8b2ZpZmljZSUyMG1lZXRpbmd8ZW58MHwwfDB8fA%3D%3D&w=1000&q=80") no-repeat center;
+  background-size: cover;
+}
+.banner-content {
+  margin: 85px 0;
+}
+
+.banner-description {
+  -ms-flex-preferred-size: 47%;
+  flex-basis: 47%;
+}
+.banner-description p {
+  margin-bottom: 35px;
+  font-size: 58px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.banner-form {
+  padding: 44px;
+  border-radius: 4px;
+  -ms-flex-preferred-size: 40%;
+  flex-basis: 40%;
+  background: #fff;
+}
+.banner-form h2 {
+  font-size: 26px;
+  font-weight: 600;
+}
+.banner-form h2::first-letter {
+  text-transform: uppercase;
+}
+.banner-form p {
+  margin: 23px 0 37px;
+}
+.banner-form p.price-para {
+  margin: 26px 0 37px;
+}
+.input-group select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e2e2e5;
+  border-radius: 4px;
+  outline: none;
+  background: #fff;
+  color: #8e8e94;
+  text-transform: capitalize;
+}
+
+.input-control a {
+  width: 100%;
+  margin-bottom: 9px;
+  text-align: center;
+}
+
+/* banner section end */
 
 /*# sourceMappingURL=style.css.map */
