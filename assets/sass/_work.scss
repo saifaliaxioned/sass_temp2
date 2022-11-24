@@ -1,0 +1,43 @@
+/* work section start */
+.work {
+  padding: 150px 0 130px;
+  @include background(section-color);
+
+  @at-root {
+    .work-items {
+      padding-top: 90px;
+      @extend %flex;
+      gap: 65px;
+
+      li {
+        @include flex-basis(30%);
+      }
+
+      span {
+        padding: 24px;
+        border-radius: 50%;
+        @include display(inline-block);
+        @include background(light-blue);
+        @include color(blue-color);
+        @include font($weight: bold);
+      }
+      
+      h4 {
+        padding: 17px 0;
+        @include font($size:21px, $weight: bold);
+
+        &::first-letter {
+          @include font($text:uppercase);
+        }
+      }
+      
+      p {
+        &::first-letter {
+          @include font($text:uppercase);
+        }
+        line-height: 1.6;
+      }
+    }
+  }
+}
+/* work section end */

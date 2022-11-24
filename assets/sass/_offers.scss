@@ -1,6 +1,4 @@
 .section-heading {
-  padding-top: 50px;
-  margin: 87px 0;
   @include font($textAlign: center);
 
   h3 {
@@ -23,12 +21,11 @@
 
 /* offers section start */
 .offers {
-  padding-bottom: 68px;
-  margin-bottom: 48px;
+  padding: 150px 0 130px;
 
   @at-root {
     .offer-cards {
-      margin: 20px 0;
+      padding: 90px 0 20px;
       @extend %flex;
       gap: 29px;
 
