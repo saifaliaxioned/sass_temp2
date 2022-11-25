@@ -565,6 +565,33 @@ nav {
   text-align: center;
 }
 
+@media only screen and (max-width: 1280px) {
+  .wrapper {
+    width: 94%;
+  }
+  .banner-description p {
+    font-size: 43px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .banner-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .banner-description {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .banner-form h2 {
+    font-size: 20px;
+  }
+  .banner-form p {
+    font-size: 12px;
+  }
+}
+
 /* banner section end */
 .section-heading {
   text-align: center;
@@ -596,6 +623,19 @@ nav {
   padding: 90px 0 20px;
   gap: 29px;
 }
+@media only screen and (max-width: 995px) {
+  .offer-cards {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .offer-cards {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
 .offer-cards > li {
   border-radius: 3px;
   -ms-flex-preferred-size: 32%;
@@ -604,6 +644,18 @@ nav {
   background: -o-linear-gradient(top, #0989f9, #054782);
   background: linear-gradient(180deg, #0989f9, #054782);
   color: #fff;
+}
+@media only screen and (max-width: 995px) {
+  .offer-cards > li {
+    -ms-flex-preferred-size: 45%;
+    flex-basis: 45%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .offer-cards > li {
+    -ms-flex-preferred-size: 68%;
+    flex-basis: 68%;
+  }
 }
 
 .loan-price {
@@ -624,9 +676,19 @@ nav {
   color: #33d4d6;
   font-size: 27px;
 }
+@media only screen and (max-width: 995px) {
+  .loan-price p {
+    font-size: 20px;
+  }
+}
 
 .loan-details {
   padding: 48px;
+}
+@media only screen and (max-width: 1280px) {
+  .loan-details {
+    padding: 30px;
+  }
 }
 
 .loan-items {
@@ -669,6 +731,11 @@ nav {
   align-items: center;
   gap: 89px;
 }
+@media only screen and (max-width: 1024px) {
+  .about-content {
+    gap: 40px;
+  }
+}
 
 .about-image {
   -ms-flex-preferred-size: 48.4%;
@@ -685,9 +752,20 @@ nav {
   font-size: 42px;
   text-transform: capitalize;
 }
+@media only screen and (max-width: 1024px) {
+  .about-details h4 {
+    font-size: 34px;
+  }
+}
 .about-details p {
   font-size: 15px;
   line-height: 1.6;
+}
+@media only screen and (max-width: 1024px) {
+  .about-details {
+    -ms-flex-preferred-size: 45%;
+    flex-basis: 45%;
+  }
 }
 
 .about-items {
@@ -706,6 +784,11 @@ nav {
   top: 36%;
   left: -20px;
   background: #0a8cff;
+}
+@media only screen and (max-width: 1024px) {
+  .about-items li {
+    font-size: 12px;
+  }
 }
 
 .about-btn {
@@ -757,6 +840,11 @@ nav {
 .question-content {
   gap: 77px;
 }
+@media only screen and (max-width: 1024px) {
+  .question-content {
+    gap: 40px;
+  }
+}
 
 .question-image {
   -ms-flex-preferred-size: 45%;
@@ -769,12 +857,26 @@ nav {
   -ms-flex-preferred-size: 34%;
   flex-basis: 34%;
 }
+@media only screen and (max-width: 1024px) {
+  .accordion-part {
+    padding-top: 20px;
+    margin-top: 0;
+    -ms-flex-preferred-size: 40%;
+    flex-basis: 40%;
+  }
+}
 .accordion-part h4 {
   padding: 38px 0;
   font-size: 42px;
 }
 .accordion-part h4::first-letter {
   text-transform: uppercase;
+}
+@media only screen and (max-width: 1024px) {
+  .accordion-part h4 {
+    padding: 38px 0 20px;
+    font-size: 34px;
+  }
 }
 
 .accordion-items li {
@@ -787,6 +889,11 @@ nav {
 }
 .accordion-items li h5::first-letter {
   text-transform: uppercase;
+}
+@media only screen and (max-width: 1024px) {
+  .accordion-items li h5 {
+    font-size: 13px;
+  }
 }
 .accordion-items li:first-child a::before {
   -webkit-transform: rotate(180deg);
@@ -815,6 +922,11 @@ nav {
   float: left;
   text-indent: 0;
 }
+@media only screen and (max-width: 1024px) {
+  .accordion-btn a {
+    font-size: 13px;
+  }
+}
 
 /* question section end */
 /* slider section start */
@@ -829,6 +941,12 @@ nav {
   -ms-flex-preferred-size: 18%;
   flex-basis: 18%;
   position: relative;
+}
+@media only screen and (max-width: 1024px) {
+  .slider-image {
+    -ms-flex-preferred-size: 23%;
+    flex-basis: 23%;
+  }
 }
 .slider-image img {
   border-radius: 50%;
@@ -857,6 +975,13 @@ nav {
   font-size: 17px;
   font-weight: bold;
   line-height: 1.8;
+}
+@media only screen and (max-width: 1024px) {
+  .slider-description p {
+    width: 100%;
+    padding-top: 21px;
+    font-size: 15px;
+  }
 }
 .slider-description span {
   padding: 17px 0;

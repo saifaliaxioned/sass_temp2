@@ -29,6 +29,9 @@
       @extend %flex;
       gap: 29px;
 
+      @include maxResponsive(tablet) { @include flex-wrap(wrap); }
+      @include maxResponsive(largePhone) { @include justify-content(center); }
+
       > li {
         border-radius: 3px;
         @include flex-basis(32%);
@@ -36,6 +39,9 @@
         background: -o-linear-gradient(top, #0989f9, #054782);
         background: linear-gradient(180deg, #0989f9, #054782);
         @include color(white-color);
+
+        @include maxResponsive(tablet) { @include flex-basis(45%); }
+        @include maxResponsive(largePhone) { @include flex-basis(68%); }
       }
     }
 
@@ -58,11 +64,19 @@
         margin-bottom: 16px;
         @include color(btn-color);
         @include font($size: 27px);
+
+        @include maxResponsive(tablet) {
+          @include font($size: 20px);
+        }
       }
     }
 
     .loan-details {
       padding: 48px;
+
+      @include maxResponsive(large-desktop) {
+        padding: 30px;
+      }
     }
 
     .loan-items {

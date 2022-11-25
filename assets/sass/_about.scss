@@ -12,6 +12,10 @@
       @extend %flex;
       @include align-items(center);
       gap: 89px;
+
+      @include maxResponsive(desktop) {
+        gap: 40px;
+      }
     }
 
     .about-image {
@@ -21,16 +25,19 @@
     .about-details {
       margin-bottom: 61px;
       @include flex-basis(38%);
-
+      
       h4 {
         padding: 38px 0;
         @include font($size: 42px, $text: capitalize);
+        @include maxResponsive(desktop) { @include font($size: 34px); }
       }
 
       p {
         @include font($size: 15px);
         line-height: 1.6;
       }
+      
+      @include maxResponsive(desktop) { @include flex-basis(45%); }
     }
 
     .about-items {
@@ -46,6 +53,8 @@
           @include position(7px, 7px, 50%, absolute, $top: 36%, $left: -20px);
           @include background(blue-color);
         }
+
+        @include maxResponsive(desktop) { @include font($size: 12px); }
       }
     }
 

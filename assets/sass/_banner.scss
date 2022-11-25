@@ -80,6 +80,39 @@
         }
       }
     }
+    @include maxResponsive(large-desktop) {
+      .wrapper {
+        width: 94%;
+      }
+      
+      .banner-description {
+        p {
+          @include font($size: 43px);
+        }
+      }
+    }
+
+    @include maxResponsive(desktop) {
+      .banner-content {
+        @include flex-direction(column);
+      }
+
+      .banner-description {
+        margin-bottom: 40px;
+        @include font($textAlign: center);
+      }
+
+      .banner-form {
+        h2 {
+          @include font($size: 20px);
+        }
+        
+        p {          
+          @include font($size: 12px);
+        }
+      }
+    }
+
   }
 }
 /* banner section end */

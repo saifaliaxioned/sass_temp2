@@ -12,6 +12,8 @@
     .slider-image {
       @include flex-basis(18%);
       @include position($position: relative);
+
+      @include maxResponsive(desktop) { @include flex-basis(23%); }
       
       img {
         border-radius: 50%;
@@ -33,6 +35,12 @@
         padding-top: 40px;
         @include font($size: 17px, $weight: bold);
         line-height: 1.8;
+
+        @include maxResponsive(desktop) {
+          width: 100%;
+          padding-top: 21px;
+          @include font($size: 15px);
+        }
       }
 
       span {

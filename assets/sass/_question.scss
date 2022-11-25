@@ -8,6 +8,8 @@
     .question-content {
       @extend %flex;
       gap: 77px;
+
+      @include maxResponsive(desktop) { gap: 40px; }
     }
     .question-image {
       @include flex-basis(45%);
@@ -17,6 +19,12 @@
       padding-top: 34px;
       margin-top: 44px;
       @include flex-basis(34%);
+
+      @include maxResponsive(desktop) {
+        padding-top: 20px;
+        margin-top: 0;
+        @include flex-basis(40%);
+      }
       
       h4 {
         padding: 38px 0;
@@ -24,6 +32,11 @@
 
         &::first-letter {
           @include font($text:uppercase);
+        }
+
+        @include maxResponsive(desktop) {
+          padding: 38px 0 20px;
+          @include font($size: 34px);
         }
       }
     }
@@ -41,6 +54,7 @@
           &::first-letter {
             @include font($text: uppercase);
           }
+          @include maxResponsive(desktop) { @include font($size: 13px); }
         }
 
         &:first-child a::before {
@@ -69,6 +83,7 @@
           @include icon("\f107", $margin: 0 0 0 2%, $float: left, $textIndent: true);
           @extend %transition;
         }
+        @include maxResponsive(desktop) { @include font($size: 13px); }
       }
     }
   }
