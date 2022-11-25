@@ -31,7 +31,7 @@ header {
 
   @at-root {
     .logo {
-      @include font($size: 20px, $weight: bold, $text: capitalize);
+      @include font($size: 23px, $weight: bold, $text: capitalize);
 
       a {
         @include color(white-color);
@@ -81,7 +81,7 @@ header {
     .bar::before,
     .bar::after {
       content: "";
-      @include position(100%, inherit, absolute, $left: 0);
+      @include position(100%, inherit, $position: absolute, $left: 0);
       background-color: inherit;
       @extend %transition;
     }
@@ -94,25 +94,28 @@ header {
       @include position($top: 6px);
     }
 
-    .active-hamburger .bar {
+    .hamburger:hover .bar {
       @include transform(translate(-50%, -50%) rotate(45deg));
     }
 
-    .active-hamburger .bar::before {
+    .hamburger:hover .bar::before {
       @include transform(translateY(6px) rotate(0));
     }
 
-    .active-hamburger .bar::after {
+    .hamburger:hover .bar::after {
       @include transform(translateY(-6px) rotate(-90deg));
     }
     /* hamburger end */
+    nav {
+      margin-left: 4.5%;
+    }
 
     .nav-items {
       @extend %flex;
-      gap: 40px;
+      gap: 31px;
 
       li {
-        @include font($size: 11px, $weight: bold, $text: capitalize);
+        @include font($size: 12px, $weight: bold, $text: capitalize);
       }
 
       span {
@@ -131,8 +134,15 @@ header {
       }
     }
 
+    .down-arrow::after {
+      @include icon("\f107");
+      @include color(grey-text);
+      margin: 1px 0 0 3px;
+      float: right;
+    }
+
     .header-contact {
-      @include font($size: 10px);
+      @include font($size: 12px);
       @extend %flex;
       @include align-items(center);
       gap: 10px;
@@ -163,6 +173,74 @@ header {
           @include color(btn-color);
         }
       }
+    }
+
+    @include maxResponsive(desktop) {
+      nav {
+        margin-left: 0;
+      }
+
+      .nav-items {
+        li {
+          @include font($size: 10px);
+        }
+      }
+      .logo {
+        @include font($size: 20px);
+      }
+      
+      .header-contact {
+        @include font($size: 9px);
+      }
+    }
+
+    @include maxResponsive(tablet) {
+      .nav-items {
+        li {
+          @include font($size: 9px);
+        }
+      }
+
+      .logo {
+        @include font($size: 17px);
+      }
+    }
+
+    @include maxResponsive(ipad) {
+      .hamburger {
+        padding: 5px;
+        @include display(block);
+        @include position($zIndex: 3); 
+      }
+    
+      nav {
+        width: 100%;
+        height: 100vh;
+        @include position($position: fixed, $zIndex: 1, $top: -100%, $left: 0);
+        @include background(black-color);
+        @include transition(all .5s ease);
+      }
+    
+      .hamburger:hover + nav {
+        @include position($top: 0);
+      }
+
+      .header-contact {
+        @include position($position: absolute, $top: 20px, $right: 13%);
+      }
+
+      .nav-items {
+        width: inherit;
+        height: inherit;
+        @include flex-direction(column);
+        @include align-items(center);
+        @include justify-content(center);
+        gap: 40px;
+
+        a {
+          @include font($size: 18px);
+        }
+      } 
     }
   }
 }
