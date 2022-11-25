@@ -29,7 +29,11 @@
       @extend %flex;
       gap: 29px;
 
-      @include maxResponsive(tablet) { @include flex-wrap(wrap); }
+      @include maxResponsive(tablet) {
+        @include flex-wrap(wrap);
+        gap: 20px;
+      }
+
       @include maxResponsive(largePhone) { @include justify-content(center); }
 
       > li {
@@ -82,10 +86,13 @@
     .loan-items {
       @extend %flex-column;
       gap: 12px;
+
+      @include maxResponsive(tablet) { padding: 15px; }
       
       li {
         @include font($size: 16px);
-
+        @include maxResponsive(tablet) { @include font($size: 12px); }
+        
         &::before {
           content: "";
           width: 7px;
@@ -100,6 +107,7 @@
 
     .loan-btn {
       padding-top: 40px;
+      @include maxResponsive(tablet) { padding: 0 15px 43px 15px; }
 
       a {
         width: 100%;

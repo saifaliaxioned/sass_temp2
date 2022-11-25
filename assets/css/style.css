@@ -627,6 +627,7 @@ nav {
   .offer-cards {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    gap: 20px;
   }
 }
 @media only screen and (max-width: 640px) {
@@ -694,8 +695,18 @@ nav {
 .loan-items {
   gap: 12px;
 }
+@media only screen and (max-width: 995px) {
+  .loan-items {
+    padding: 15px;
+  }
+}
 .loan-items li {
   font-size: 16px;
+}
+@media only screen and (max-width: 995px) {
+  .loan-items li {
+    font-size: 12px;
+  }
 }
 .loan-items li::before {
   content: "";
@@ -709,6 +720,11 @@ nav {
 
 .loan-btn {
   padding-top: 40px;
+}
+@media only screen and (max-width: 995px) {
+  .loan-btn {
+    padding: 0 15px 43px 15px;
+  }
 }
 .loan-btn a {
   width: 100%;
@@ -1025,6 +1041,11 @@ nav {
   color: #fff;
   font-size: 44px;
 }
+@media only screen and (max-width: 995px) {
+  .apply-content p {
+    font-size: 39px;
+  }
+}
 
 .apply-content-btn {
   -ms-flex-preferred-size: 40%;
@@ -1045,10 +1066,20 @@ nav {
   justify-content: space-between;
   gap: 90px;
 }
+@media only screen and (max-width: 995px) {
+  .footer-content {
+    margin: 0;
+  }
+}
 
 footer .logo {
   width: 100%;
   margin: 5px 0 20px;
+}
+@media only screen and (max-width: 995px) {
+  footer .logo {
+    margin: 0;
+  }
 }
 footer .logo a {
   color: #000;

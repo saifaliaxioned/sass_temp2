@@ -24,6 +24,7 @@
         @include flex-basis(60%);
         @include color(white-color);
         @include font($size: 44px);
+        @include maxResponsive(tablet) { @include font($size: 39px); }
       }
     }
 

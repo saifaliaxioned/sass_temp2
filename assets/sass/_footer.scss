@@ -4,12 +4,17 @@
   @extend %flex;
   @include justify-content(space-between);
   gap: 90px;
+
+  @include maxResponsive(tablet) { margin: 0; }
 }
 
 footer {
   .logo {
     width: 100%;
     margin: 5px 0 20px;
+
+    @include maxResponsive(tablet) { margin: 0; }
+
     a {
       @include color(black-color);
     }
