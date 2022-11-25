@@ -5,7 +5,7 @@
   @include justify-content(space-between);
   gap: 90px;
 
-  @include maxResponsive(tablet) { margin: 0; }
+  @include maxResponsive(tablet) { @include flex-direction(column); }
 }
 
 footer {
