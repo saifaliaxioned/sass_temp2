@@ -60,6 +60,11 @@ footer {
     @include color(grey-text);
     @include font($size: 12px, $weight: bold);
     @extend %transition;
+
+    &:hover {
+      @include color(btn-color);
+      text-decoration: underline;
+    }
   }
 }
 
@@ -71,10 +76,113 @@ footer {
     @include color(grey-text);
     @include font($size: 12px, $weight: bold);
     @extend %transition;
+
+    &:hover {
+      @include color(btn-color);
+      text-decoration: underline;
+    }
   }
 }
 
 .subscribe-items {
   @extend .services-items;
+
+  p {
+    padding: 20px 0;
+    @include font($size: 12px, $weight: bold);
+    line-height: 1.8;
+  }
+
+  form {
+    padding: 3px;
+    border: 1px solid #8e8e944d;
+    @extend %flex;
+    @include justify-content(space-between);
+  }
+
+  @at-root {
+    .input-group {
+      @include flex-basis(70%);
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        outline: none;
+      }
+    }
+
+    .input-control {
+      @include flex-basis(30%);
+
+      input {
+        width: 100%;
+        padding: 12px 10px;
+        border: none;
+        outline: none;
+        @include background(blue-color);
+        @include color(white-color);
+        @include font($size: 12px);
+        @extend %transition;
+
+        &:hover {
+          @include background(hover-blue);
+        }
+      }
+    }
+  }
 }
+
+.copyright {
+  padding: 50px 0;
+  @include font($size: 12px, $weight: bold, $textAlign: center);
+
+  a {
+    @include color(blue-color);
+    @include font($text: capitalize);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    @include display(inline-block);
+    text-indent: -9999px;
+  }
+
+  @at-root {
+    .heart-icon::before {
+      @include icon("\f004", $float:left, $textIndent: true);
+    }
+  }
+}
+
+.social-items {
+  @extend %flex;
+  gap: 10px;
+
+  a {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #8e8e944d;
+    border-radius: 50%;
+    @include color(icon-color);
+    @include position($position: relative);
+    text-indent: -9999px;
+    @extend %transition;
+
+    &::before {
+      @include icon($position: absolute, $top: 50%, $left: 50%, $size: 12px);
+      text-indent: 0;
+      @extend %transform-center;
+    }
+
+    
+    &:hover {
+      @include transform(scale(1.2));
+    }
+  }
+}
+@include onlyIcon($fontAwesome);
 // footer end

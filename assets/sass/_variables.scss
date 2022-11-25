@@ -1,10 +1,10 @@
-$colors : (white-color:#fff, black-color:#000, btn-color: #33d4d6, grey-text: #8e8e94 ,blue-color: #0a8cff, section-color: #F6FBFF, light-blue: #DDF0FF);
+$colors : (white-color:#fff, black-color:#000, btn-color: #33d4d6, grey-text: #8e8e94 ,blue-color: #0a8cff, section-color: #F6FBFF, light-blue: #DDF0FF, hover-blue: #095da6, icon-color: #8e8e944d);
 
 $devices:(large-desktop:"1280px", desktop:"1024px", tablet:"995px", ipad:"768px", largePhone:"640px", mediumPhone:"480px", smallPhone:"320px");
 
 $headerIcon:("shop":"\f290","search":"\f002");
 
-$fontAwesome : ("facebook":"\f39e","twitter":"\f099", "vimeo":"\f40a", "instagram":"\e055");
+$fontAwesome : (facebook:"\f39e", google:"\f0d5", twitter:"\f099", instagram:"\e055");
 
 $testimonialIcon: ("prev":"\f100","next":"\f101");
 
